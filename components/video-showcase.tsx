@@ -40,19 +40,19 @@ export default function VideoShowcase() {
       id: "video1",
       title: "Personal Branding Essentials",
       thumbnail: "/placeholder.svg?height=600&width=300",
-      wistiaId: "4xwuj306rz", // First unique video
+      wistiaId: "h07amux97n", // First unique video
     },
     {
       id: "video2",
       title: "Content Strategy Masterclass",
       thumbnail: "/placeholder.svg?height=600&width=300",
-      wistiaId: "l716t38zyg", // Second unique video
+      wistiaId: "20yq66lb0d", // Second unique video
     },
     {
       id: "video3",
       title: "Audience Growth Techniques",
       thumbnail: "/placeholder.svg?height=600&width=300",
-      wistiaId: "5snnzkl33z", // Third unique video
+      wistiaId: "r6rcvilwed", // Third unique video
     },
   ]
 

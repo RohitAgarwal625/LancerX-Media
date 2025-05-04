@@ -91,7 +91,17 @@ const VideoCard = ({ title, views, imageUrl, delay = 0 }) => {
 }
 
 // Brand Card Component for Personal Brand Leads To section
-const BrandCard = ({ icon: Icon, title, description, delay = 0 }) => {
+const BrandCard = ({ 
+  icon: Icon, 
+  title, 
+  description, 
+  delay = 0 
+}: { 
+  icon: React.ComponentType<{ className?: string }>; 
+  title: string; 
+  description: string; 
+  delay?: number 
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -146,7 +156,7 @@ const BrandCard = ({ icon: Icon, title, description, delay = 0 }) => {
 }
 
 // Enhanced Testimonial Card Component
-const TestimonialCard = ({ name, role, quote, imageUrl, rating = 5, delay = 0, initials, avatarBg = "bg-primary" }) => {
+const TestimonialCard = ({ name, role, quote, imageUrl, rating = 5, delay = 0, initials, avatarBg = "bg-primary" }: { name: string; role: string; quote: string; imageUrl: string; rating?: number; delay?: number; initials?: string; avatarBg?: string }) => {
   return (
     <AnimatedCard delay={delay} className="group relative">
       <div className="bg-black/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800 h-full relative overflow-hidden transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(124,58,237,0.3)]">
@@ -259,7 +269,7 @@ const TestimonialCard = ({ name, role, quote, imageUrl, rating = 5, delay = 0, i
 }
 
 // Stat Card Component for Testimonial Section
-const StatCard = ({ value, label, prefix = "", suffix = "", icon, iconBg = "bg-primary", delay = 0 }) => {
+const StatCard = ({ value, label, prefix = "", suffix = "", icon, iconBg = "bg-primary", delay = 0 }: { value: string; label: string; prefix?: string; suffix?: string; icon: React.ReactNode; iconBg?: string; delay?: number }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -333,39 +343,39 @@ export default function Home() {
       role: "Tech Startup CEO",
       initials: "SJ",
       quote:
-        "Working with this team transformed my personal brand. In just 3 months, my LinkedIn following grew 400% and I secured speaking engagements at major industry conferences.",
+        "LancerX Media transformed our video content strategy. Their professional production quality and strategic approach helped us increase our conversion rate by 300% in just 3 months.",
       avatarBg: "bg-primary",
     },
     {
       name: "Marcus Chen",
-      role: "Financial Advisor",
+      role: "E-commerce Brand Owner",
       initials: "MC",
       quote:
-        "The micro-branding strategy they implemented helped me target high-net-worth clients specifically. My client acquisition costs dropped 60% while conversions increased dramatically.",
+        "The video content they produced for our product launches consistently outperforms our previous content. Our engagement rates have increased by 250% and sales have followed suit.",
       avatarBg: "bg-accent",
     },
     {
       name: "Elena Rodriguez",
-      role: "Fitness Coach",
+      role: "Fitness Influencer",
       initials: "ER",
       quote:
-        "I tried growing my social media for years with minimal results. Within 6 months of working together, I've built a targeted audience of 8,500 followers and launched a successful coaching program.",
+        "Working with LancerX Media has been a game-changer. Their video production quality is exceptional, and their content strategy helped me grow my YouTube channel from 0 to 50K subscribers in 6 months.",
       avatarBg: "bg-success",
     },
     {
       name: "David Palmer",
-      role: "Real Estate Agent",
+      role: "Marketing Director",
       initials: "DP",
       quote:
-        "The personal branding system helped me stand out in a crowded market. I'm now recognized as the go-to agent in my area, and my commissions have increased by 215% year-over-year.",
+        "The ROI on our video content has been incredible since partnering with LancerX Media. Their end-to-end service from scripting to production has saved us countless hours and delivered outstanding results.",
       avatarBg: "bg-sky-500",
     },
     {
       name: "Priya Sharma",
-      role: "E-commerce Entrepreneur",
+      role: "SaaS Founder",
       initials: "PS",
       quote:
-        "My online store was struggling until we implemented their branding strategy. The focused audience building approach led to a 178% revenue increase and much higher customer loyalty.",
+        "LancerX Media's video production team is simply outstanding. They understand our brand voice perfectly and consistently deliver high-quality content that resonates with our target audience.",
       avatarBg: "bg-rose-500",
     },
   ]
@@ -388,10 +398,10 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-300 mb-4"
           >
-            Effortless content creation for{" "}
+            Effortless content creation for for{" "}
             <span className="bg-gray-800 px-3 py-1 rounded-full">
               <TypingAnimation
-                words={["Brands", "Entrepreneurs", "Creators", "VCs"]}
+                words={["Brands", "Startups", "Creators", "Enterprises"]}
                 typingSpeed={100}
                 deletingSpeed={50}
                 delayBetweenWords={2000}
@@ -400,27 +410,25 @@ export default function Home() {
           </motion.p>
 
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold">
-            Fuel Your{" "}
+            Ignite Your{" "}
             <span className="bg-gradient-to-r from-white via-purple-400 to-primary text-transparent bg-clip-text">
-              Creativity
+              Imagination
             </span>
           </h1>
-
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mt-2">
-            Craft Content That{" "}
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold">
+            Create Content{" "}
             <span className="bg-gradient-to-r from-white via-purple-400 to-primary text-transparent bg-clip-text">
-              leaves a Mark!
+              that resonates !
             </span>
           </h1>
 
           <motion.p
-            initial={{ y: 50, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="text-sm md:text-base text-gray-300 font-light mb-10 mt-6 max-w-4xl mx-auto"
           >
-            We help entrepreneurs, creators, and VCs build distribution with organic videos, which predictably bring
-            them more leads and revenue at scale.
+            We take care of everything: ideation, scripting, production, editing, thumbnails, publishing, and strategy—so you can focus on your brand and business.
           </motion.p>
 
           <motion.div
@@ -439,7 +447,7 @@ export default function Home() {
                   }
                 }}
               >
-                Start Your Branding Journey
+                Start Your Youtube Journey
               </GlowButton>
             </div>
 
@@ -495,31 +503,6 @@ export default function Home() {
             }}
             transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1 }}
           />
-
-          {/* Animated particles */}
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={`particle-branding-${i}`}
-              className="absolute rounded-full bg-primary/20"
-              style={{
-                width: Math.random() * 6 + 2,
-                height: Math.random() * 6 + 2,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, Math.random() * -50 - 20],
-                x: [0, Math.random() * 50 - 25],
-                opacity: [0, 0.5, 0],
-                scale: [0, 1, 0],
-              }}
-              transition={{
-                duration: Math.random() * 5 + 5,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
-            />
-          ))}
         </div>
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -543,8 +526,8 @@ export default function Home() {
               transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
             >
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
-                Why Personal Branding is a{" "}
-                <GradientText className="text-6xl md:text-7xl lg:text-8xl">MUST</GradientText> in 2025
+                YouTube as a{" "}
+                <GradientText className="text-6xl md:text-7xl lg:text-8xl">Service</GradientText>
               </h2>
             </motion.div>
 
@@ -562,7 +545,7 @@ export default function Home() {
             {/* Left column with animated text */}
             <div>
               <AnimatedLetterText
-                text="IN TODAY'S DIGITAL WORLD, IF YOU'RE NOT VISIBLE, YOU'RE INVISIBLE."
+                text="YOUR YOUTUBE SUCCESS PARTNER"
                 tag="h3"
                 className="text-2xl md:text-3xl font-bold mb-8 text-white"
                 delay={0.3}
@@ -576,8 +559,7 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <p className="text-lg md:text-xl text-gray-300">
-                  Your personal brand is the key to unlocking massive opportunities, building trust, and attracting
-                  high-value clients. Here's why personal branding is no longer optional—it's a necessity in 2025!
+                  We handle everything from ideation to publishing, so you can focus on what matters most - growing your business.
                 </p>
 
                 <div className="flex items-center space-x-4 mt-8">
@@ -585,11 +567,10 @@ export default function Home() {
                     className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center"
                     whileHover={{ scale: 1.1, backgroundColor: "rgba(124, 58, 237, 0.3)" }}
                   >
-                    <span className="text-xl">🚀</span>
+                    <span className="text-xl">🎯</span>
                   </motion.div>
                   <p className="text-lg">
-                    <span className="font-bold text-white">93%</span> of consumers trust recommendations from
-                    individuals over brands
+                    <span className="font-bold text-white">Strategic Content Planning</span> - Data-driven approach to maximize engagement
                   </p>
                 </div>
 
@@ -598,11 +579,10 @@ export default function Home() {
                     className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center"
                     whileHover={{ scale: 1.1, backgroundColor: "rgba(124, 58, 237, 0.3)" }}
                   >
-                    <span className="text-xl">💰</span>
+                    <span className="text-xl">🎥</span>
                   </motion.div>
                   <p className="text-lg">
-                    <span className="font-bold text-white">71%</span> of consumers are more likely to purchase based on
-                    social media referrals
+                    <span className="font-bold text-white">Professional Production</span> - High-quality videos that convert
                   </p>
                 </div>
 
@@ -611,11 +591,10 @@ export default function Home() {
                     className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center"
                     whileHover={{ scale: 1.1, backgroundColor: "rgba(124, 58, 237, 0.3)" }}
                   >
-                    <span className="text-xl">🔥</span>
+                    <span className="text-xl">📈</span>
                   </motion.div>
                   <p className="text-lg">
-                    <span className="font-bold text-white">86%</span> of consumers say authenticity is important when
-                    deciding what brands to support
+                    <span className="font-bold text-white">Growth Optimization</span> - Proven strategies to increase views and subscribers
                   </p>
                 </div>
               </motion.div>
@@ -623,65 +602,56 @@ export default function Home() {
 
             {/* Right column with animated card */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              className="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-primary/30"
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
-              className="relative"
+              whileHover={{
+                boxShadow: "0 0 30px rgba(124, 58, 237, 0.3)",
+                borderColor: "rgba(124, 58, 237, 0.5)",
+              }}
             >
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-lg opacity-70"></div>
-              <div className="relative bg-black/60 backdrop-blur-sm p-8 rounded-xl border border-primary/30">
-                <h3 className="text-2xl font-bold mb-6 flex items-center">
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                    className="mr-3"
+              <h3 className="text-2xl font-bold mb-6 text-white">What We Handle</h3>
+              <ul className="space-y-4">
+                {[
+                  "Content ideation and research",
+                  "Script writing and storyboarding",
+                  "Professional video production",
+                  "High-end editing and effects",
+                  "Custom thumbnail design",
+                  "SEO optimization and publishing",
+                  "Analytics and performance tracking",
+                  "Audience engagement strategy"
+                ].map((item, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start"
                   >
-                    <div className="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center">
-                      <span className="text-xl">💎</span>
-                    </div>
-                  </motion.div>
-                  The Digital Revolution
-                </h3>
+                    <motion.div whileHover={{ scale: 1.2, color: "#9333EA" }} className="text-primary mr-3 mt-1">
+                      <CheckCircle2 className="w-5 h-5" />
+                    </motion.div>
+                    <span>{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
 
-                <ul className="space-y-4">
-                  {[
-                    "Short-form video content dominates attention spans",
-                    "AI-powered algorithms favor personal stories over corporate content",
-                    "Micro-influencers outperform traditional celebrities in engagement",
-                    "Personal brands can pivot faster than corporate entities",
-                    "Authenticity creates deeper connections than polished marketing",
-                  ].map((item, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-start"
-                    >
-                      <motion.div whileHover={{ scale: 1.2, color: "#9333EA" }} className="text-primary mr-3 mt-1">
-                        <CheckCircle2 className="w-5 h-5" />
-                      </motion.div>
-                      <span>{item}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-
-                <motion.div
-                  className="mt-8 p-4 bg-primary/10 rounded-lg border border-primary/30"
-                  whileHover={{
-                    scale: 1.02,
-                    backgroundColor: "rgba(124, 58, 237, 0.2)",
-                    transition: { duration: 0.2 },
-                  }}
-                >
-                  <p className="text-lg italic">
-                    "In 2025, your personal brand isn't just part of your business strategy—it IS your business
-                    strategy."
-                  </p>
-                </motion.div>
-              </div>
+              <motion.div
+                className="mt-8 p-4 bg-primary/10 rounded-lg border border-primary/30"
+                whileHover={{
+                  scale: 1.02,
+                  backgroundColor: "rgba(124, 58, 237, 0.2)",
+                  transition: { duration: 0.2 },
+                }}
+              >
+                <p className="text-lg italic">
+                  "Let us handle the technical side while you focus on your expertise and business growth."
+                </p>
+              </motion.div>
             </motion.div>
           </div>
 
@@ -694,11 +664,11 @@ export default function Home() {
             className="text-center"
           >
             <AnimatedText tag="p" className="text-3xl md:text-4xl font-bold text-center text-success mb-8" delay={0.7}>
-              YOUR PERSONAL BRAND IS YOUR MOST VALUABLE ASSET
+              READY TO SCALE YOUR YOUTUBE PRESENCE?
             </AnimatedText>
 
-            <AnimatedButton variant="holographic" size="lg" className="mx-auto">
-              Start Building Your Brand Today
+            <AnimatedButton variant="liquid" size="lg" className="mx-auto">
+              Start Your YouTube Journey
             </AnimatedButton>
 
             {/* Animated accent lines */}
@@ -825,25 +795,25 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <StatCard
-                value="94"
+                value="98"
                 suffix="%"
                 label="Client Satisfaction Rate"
-                icon="😍"
+                icon="🎥"
                 iconBg="bg-rose-500"
                 delay={0.2}
               />
               <StatCard
-                value="187"
+                value="300"
                 suffix="%"
-                label="Average Growth in Followers"
-                icon="👥"
+                label="Average Engagement Increase"
+                icon="📈"
                 iconBg="bg-primary"
                 delay={0.3}
               />
               <StatCard
-                value="215"
+                value="250"
                 suffix="%"
-                label="Average Revenue Increase"
+                label="Average ROI on Video Content"
                 icon="💰"
                 iconBg="bg-success"
                 delay={0.4}
@@ -894,24 +864,16 @@ export default function Home() {
               whileHover={{ boxShadow: "0 0 30px rgba(124, 58, 237, 0.3)", borderColor: "rgba(124, 58, 237, 0.5)" }}
             >
               <AnimatedText tag="h3" className="text-2xl md:text-3xl font-bold mb-4" delay={0.3}>
-                Start Your Success Story Today
+                Start Creating High-Converting Video Content
               </AnimatedText>
 
               <motion.p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the ranks of our successful clients and transform your personal brand into a powerful business
-                asset. Our proven strategies deliver real results.
+                Join our roster of successful clients and transform your video content strategy. 
+                Let our expert team handle everything from ideation to production while you focus on growing your business.
               </motion.p>
 
-              <AnimatedButton variant="holographic" size="lg" className="mx-auto">
-                <motion.span className="flex items-center gap-2">
-                  <motion.span
-                    animate={{ rotate: [0, 10, 0, -10, 0] }}
-                    transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                  >
-                    🚀
-                  </motion.span>
-                  Book Your Strategy Call
-                </motion.span>
+              <AnimatedButton variant="liquid" size="lg" className="mx-auto">
+                Start Your Video Journey
               </AnimatedButton>
             </motion.div>
           </motion.div>

@@ -210,7 +210,7 @@ export default function Navbar() {
   )
 }
 
-const NavLink = ({ href, label }) => {
+const NavLink = ({ href, label }: { href: string; label: string }) => {
   const [isHovered, setIsHovered] = useState(false)
   const isInternalAnchor = href.startsWith("/#")
 
@@ -293,7 +293,12 @@ const NavLink = ({ href, label }) => {
   )
 }
 
-const MobileNavLink = ({ href, onClick, children, delay = 0 }) => {
+const MobileNavLink = ({ href, onClick, children, delay = 0 }: { 
+  href: string; 
+  onClick: () => void; 
+  children: React.ReactNode; 
+  delay?: number 
+}) => {
   const isInternalAnchor = href.startsWith("/#")
   const [isHovered, setIsHovered] = useState(false)
 
