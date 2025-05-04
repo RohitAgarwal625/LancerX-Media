@@ -17,18 +17,18 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#7C3AED", // Purple
+          DEFAULT: "rgb(255 100 100)", // Updated to rgb(255 100 100)
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#FF3B30", // Red for negative points
+          DEFAULT: "rgb(255 100 100)", // Updated to rgb(255 100 100)
           foreground: "hsl(var(--secondary-foreground))",
         },
         success: {
           DEFAULT: "#34D399", // Green for positive points
         },
         accent: {
-          DEFAULT: "#9333EA", // Lighter purple
+          DEFAULT: "#FF5A5F", // Lighter red
           foreground: "hsl(var(--accent-foreground))",
         },
         destructive: {
@@ -66,8 +66,8 @@ const config: Config = {
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { opacity: "0.5", boxShadow: "0 0 5px rgba(124, 58, 237, 0.5)" },
-          "50%": { opacity: "1", boxShadow: "0 0 20px rgba(124, 58, 237, 0.8)" },
+          "0%, 100%": { opacity: "0.5", boxShadow: "0 0 5px rgba(255, 59, 48, 0.5)" },
+          "50%": { opacity: "1", boxShadow: "0 0 20px rgba(255, 59, 48, 0.8)" },
         },
         shimmer: {
           "0%": { backgroundPosition: "-200% center" },

@@ -69,7 +69,7 @@ export default function RazorpayPayment({ planName, planPrice, onSuccess, onFail
         key: keyId, // Key ID comes from server
         amount: amountInPaise,
         currency: "USD",
-        name: "7 Figures Media",
+        name: "LancerX Media",
         description: `Payment for ${planName} Plan`,
         order_id: order.id,
         handler: (response: any) => {

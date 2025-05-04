@@ -509,7 +509,7 @@ export default function PricingPage() {
               transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Why Choose <GradientText>7 Figures Media</GradientText>?
+                Why Choose <GradientText>LancerX Media</GradientText>?
               </h2>
             </motion.div>
 
@@ -562,7 +562,7 @@ export default function PricingPage() {
                     </th>
                     <th className="p-5 text-center">
                       <div className="flex flex-col items-center">
-                        <span className="text-primary font-bold mb-1">7 Figures Media</span>
+                        <span className="text-primary font-bold mb-1">LancerX Media</span>
                         <motion.div
                           className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center"
                           animate={

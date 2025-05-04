@@ -180,7 +180,7 @@ export default function LiquidButton({
       <motion.button
         ref={buttonRef}
         className={`relative rounded-full font-bold text-white overflow-hidden ${getSizeClasses()} ${className}`}
-        style={{ backgroundColor: color }}
+        style={{ background: "linear-gradient(45deg, #FF3B30, #FF5A5F)" }}
         onClick={() => {
           setIsPressed(true)
           setTimeout(() => setIsPressed(false), 300)
@@ -190,7 +190,7 @@ export default function LiquidButton({
           window.scrollTo(0, 0)
 
           // Open Calendly in a new tab
-          window.open("https://calendly.com/7figuresmedia/30min", "_blank")
+          window.open("https://calendly.com/lancerxmedia/30min", "_blank")
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -208,6 +208,13 @@ export default function LiquidButton({
         whileTap={{ scale: 0.95 }}
       >
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-500"
+          animate={{
+            opacity: isHovered ? 1 : 0,
+          }}
+          transition={{ duration: 0.3 }}
+        />
         <span className="relative z-10">{children}</span>
       </motion.button>
     </div>

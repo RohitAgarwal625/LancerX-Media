@@ -33,7 +33,7 @@ export default function NeonStarButton({
     <div className="relative group">
       {/* Floating stars around the button */}
       <motion.div
-        className="absolute -top-8 -left-8 text-purple-500"
+        className="absolute -top-8 -left-8 text-red-500"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.7, 1, 0.7],
@@ -47,7 +47,7 @@ export default function NeonStarButton({
       </motion.div>
 
       <motion.div
-        className="absolute -top-4 -right-10 text-purple-400"
+        className="absolute -top-4 -right-10 text-red-400"
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.5, 0.8, 0.5],
@@ -61,7 +61,7 @@ export default function NeonStarButton({
       </motion.div>
 
       <motion.div
-        className="absolute -bottom-6 -right-6 text-purple-600"
+        className="absolute -bottom-6 -right-6 text-red-600"
         animate={{
           scale: [1, 1.4, 1],
           opacity: [0.6, 1, 0.6],
@@ -77,12 +77,12 @@ export default function NeonStarButton({
       {/* Button with glow effect */}
       <motion.button
         onClick={onClick}
-        className={`relative rounded-full font-bold text-purple-400 bg-black border border-purple-500/30 ${getSizeClasses()} ${className} flex items-center justify-center`}
+        className={`relative rounded-full font-bold text-red-400 bg-black border border-red-500/30 ${getSizeClasses()} ${className} flex items-center justify-center`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         style={{
           boxShadow:
-            "0 0 15px rgba(168, 85, 247, 0.5), 0 0 30px rgba(168, 85, 247, 0.3), 0 0 45px rgba(168, 85, 247, 0.1)",
+            "0 0 15px rgba(239, 68, 68, 0.5), 0 0 30px rgba(239, 68, 68, 0.3), 0 0 45px rgba(239, 68, 68, 0.1)",
         }}
       >
         {/* Inner glow effect */}
@@ -90,9 +90,9 @@ export default function NeonStarButton({
           className="absolute inset-0 rounded-full opacity-50"
           animate={{
             boxShadow: [
-              "inset 0 0 10px rgba(168, 85, 247, 0.3)",
-              "inset 0 0 20px rgba(168, 85, 247, 0.5)",
-              "inset 0 0 10px rgba(168, 85, 247, 0.3)",
+              "inset 0 0 10px rgba(239, 68, 68, 0.3)",
+              "inset 0 0 20px rgba(239, 68, 68, 0.5)",
+              "inset 0 0 10px rgba(239, 68, 68, 0.3)",
             ],
           }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
@@ -100,7 +100,7 @@ export default function NeonStarButton({
 
         {/* Sparkle icon */}
         <motion.div
-          className="mr-2 text-purple-400"
+          className="mr-2 text-red-400"
           animate={{
             rotate: [0, 15, 0, -15, 0],
             scale: [1, 1.2, 1],
@@ -114,9 +114,9 @@ export default function NeonStarButton({
         <motion.span
           animate={{
             textShadow: [
-              "0 0 5px rgba(168, 85, 247, 0.5)",
-              "0 0 10px rgba(168, 85, 247, 0.7)",
-              "0 0 5px rgba(168, 85, 247, 0.5)",
+              "0 0 5px rgba(239, 68, 68, 0.5)",
+              "0 0 10px rgba(239, 68, 68, 0.7)",
+              "0 0 5px rgba(239, 68, 68, 0.5)",
             ],
           }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
@@ -130,9 +130,9 @@ export default function NeonStarButton({
         className="absolute inset-0 rounded-full -z-10"
         animate={{
           boxShadow: [
-            "0 0 20px rgba(168, 85, 247, 0.4)",
-            "0 0 30px rgba(168, 85, 247, 0.6)",
-            "0 0 20px rgba(168, 85, 247, 0.4)",
+            "0 0 20px rgba(239, 68, 68, 0.4)",
+            "0 0 30px rgba(239, 68, 68, 0.6)",
+            "0 0 20px rgba(239, 68, 68, 0.4)",
           ],
         }}
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}

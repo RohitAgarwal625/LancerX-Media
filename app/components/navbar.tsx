@@ -94,7 +94,7 @@ export default function Navbar() {
             <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
               <Image
                 src="/images/7fm-transparent.png"
-                alt="7 Figures Media Logo"
+                alt="LancerX Media Logo"
                 width={800}
                 height={224}
                 className="h-28 w-auto max-w-[350px]"

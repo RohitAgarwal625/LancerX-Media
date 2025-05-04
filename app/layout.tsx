@@ -9,7 +9,7 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "7 Figures Media - Personal Branding & Growth System",
+  title: "LancerX Media - Personal Branding & Growth System",
   description: "Ultimate Personal Branding & Growth System - From Viral Content to High-Quality Leads",
     generator: 'v0.dev'
 }

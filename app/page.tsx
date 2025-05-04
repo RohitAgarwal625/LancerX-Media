@@ -13,6 +13,7 @@ import GlowButton from "@/components/glow-button"
 import VideoShowcase from "@/components/video-showcase"
 import LetsTalkSection from "@/components/lets-talk-section"
 import TypingAnimation from "@/components/typing-animation"
+import LiquidButton from "@/components/liquid-button"
 
 // CountUp Component
 const CountUp = ({ start = 0, end = 100, duration = 2, prefix = "", suffix = "" }) => {
@@ -156,10 +157,10 @@ const BrandCard = ({
 }
 
 // Enhanced Testimonial Card Component
-const TestimonialCard = ({ name, role, quote, imageUrl, rating = 5, delay = 0, initials, avatarBg = "bg-primary" }: { name: string; role: string; quote: string; imageUrl: string; rating?: number; delay?: number; initials?: string; avatarBg?: string }) => {
+const TestimonialCard = ({ name, role, quote, imageUrl, rating = 5, delay = 0, initials, avatarBg = "bg-red-500" }: { name: string; role: string; quote: string; imageUrl: string; rating?: number; delay?: number; initials?: string; avatarBg?: string }) => {
   return (
     <AnimatedCard delay={delay} className="group relative">
-      <div className="bg-black/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800 h-full relative overflow-hidden transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(124,58,237,0.3)]">
+      <div className="bg-black/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800 h-full relative overflow-hidden transition-all duration-300 group-hover:border-red-500/50 group-hover:shadow-[0_0_30px_rgba(255,59,48,0.3)]">
         {/* Profile section */}
         <div className="flex items-center mb-4">
           <motion.div
@@ -192,7 +193,7 @@ const TestimonialCard = ({ name, role, quote, imageUrl, rating = 5, delay = 0, i
           </motion.div>
 
           <div>
-            <motion.h4 className="font-bold text-lg" whileHover={{ color: "#9333EA" }}>
+            <motion.h4 className="font-bold text-lg" whileHover={{ color: "#FF3B30" }}>
               {name}
             </motion.h4>
             <p className="text-sm text-gray-400">{role}</p>
@@ -235,7 +236,7 @@ const TestimonialCard = ({ name, role, quote, imageUrl, rating = 5, delay = 0, i
           viewport={{ once: true }}
         >
           <motion.div
-            className="absolute -top-3 -left-1 text-4xl text-primary/30"
+            className="absolute -top-3 -left-1 text-4xl text-red-500/30"
             animate={{ y: [0, -3, 0] }}
             transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
           >
@@ -243,7 +244,7 @@ const TestimonialCard = ({ name, role, quote, imageUrl, rating = 5, delay = 0, i
           </motion.div>
           <p className="text-gray-300 italic relative z-10 pl-4 group-hover:text-white">{quote}</p>
           <motion.div
-            className="absolute -bottom-3 -right-1 text-4xl text-primary/30"
+            className="absolute -bottom-3 -right-1 text-4xl text-red-500/30"
             animate={{ y: [0, -3, 0] }}
             transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: 0.5 }}
           >
@@ -251,7 +252,7 @@ const TestimonialCard = ({ name, role, quote, imageUrl, rating = 5, delay = 0, i
           </motion.div>
         </motion.div>
 
-        {/* Animated gradient border on hover - FIXED to use pseudo-element instead */}
+        {/* Animated gradient border on hover */}
         <motion.div
           className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 pointer-events-none z-0"
           initial={{ opacity: 0 }}
@@ -259,7 +260,7 @@ const TestimonialCard = ({ name, role, quote, imageUrl, rating = 5, delay = 0, i
           whileHover={{ opacity: 0.2 }}
           transition={{ duration: 0.3 }}
           style={{
-            background: "linear-gradient(45deg, #7c3aed, #ec4899, #7c3aed)",
+            background: "linear-gradient(45deg, #FF3B30, #FF5A5F, #FF3B30)",
             backgroundSize: "200% 200%",
           }}
         />
@@ -289,7 +290,7 @@ const StatCard = ({ value, label, prefix = "", suffix = "", icon, iconBg = "bg-p
         className="text-4xl font-bold mb-2"
         animate={{
           scale: [1, 1.05, 1],
-          color: ["#ffffff", "#9333EA", "#ffffff"],
+          color: ["#ffffff", "#FF6464", "#ffffff"],
         }}
         transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, delay }}
       >
@@ -748,21 +749,21 @@ export default function Home() {
               className="inline-block mb-3"
               animate={{
                 filter: [
-                  "drop-shadow(0 0 0px rgba(124, 58, 237, 0))",
-                  "drop-shadow(0 0 15px rgba(124, 58, 237, 0.7))",
-                  "drop-shadow(0 0 0px rgba(124, 58, 237, 0))",
+                  "drop-shadow(0 0 0px rgba(255, 59, 48, 0))",
+                  "drop-shadow(0 0 15px rgba(255, 59, 48, 0.7))",
+                  "drop-shadow(0 0 0px rgba(255, 59, 48, 0))",
                 ],
               }}
               transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
             >
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
                 Real <GradientText className="text-6xl md:text-7xl lg:text-8xl">Results</GradientText> From{" "}
-                <span className="text-primary">Real Clients</span>
+                <span className="text-[rgb(255_100_100)]">Real Clients</span>
               </h2>
             </motion.div>
 
             <motion.div
-              className="w-32 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-8"
+              className="w-32 h-1 bg-gradient-to-r from-[rgb(255_100_100)] to-[rgb(255_100_100)] rounded-full mx-auto mb-8"
               initial={{ width: 0 }}
               whileInView={{ width: "200px" }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -799,7 +800,7 @@ export default function Home() {
                 suffix="%"
                 label="Client Satisfaction Rate"
                 icon="🎥"
-                iconBg="bg-rose-500"
+                iconBg="bg-red-500"
                 delay={0.2}
               />
               <StatCard
@@ -807,7 +808,7 @@ export default function Home() {
                 suffix="%"
                 label="Average Engagement Increase"
                 icon="📈"
-                iconBg="bg-primary"
+                iconBg="bg-red-600"
                 delay={0.3}
               />
               <StatCard
@@ -815,7 +816,7 @@ export default function Home() {
                 suffix="%"
                 label="Average ROI on Video Content"
                 icon="💰"
-                iconBg="bg-success"
+                iconBg="bg-red-700"
                 delay={0.4}
               />
             </div>
@@ -850,33 +851,6 @@ export default function Home() {
               />
             ))}
           </div>
-
-          {/* CTA */}
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <motion.div
-              className="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-primary/30 max-w-3xl mx-auto"
-              whileHover={{ boxShadow: "0 0 30px rgba(124, 58, 237, 0.3)", borderColor: "rgba(124, 58, 237, 0.5)" }}
-            >
-              <AnimatedText tag="h3" className="text-2xl md:text-3xl font-bold mb-4" delay={0.3}>
-                Start Creating High-Converting Video Content
-              </AnimatedText>
-
-              <motion.p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join our roster of successful clients and transform your video content strategy. 
-                Let our expert team handle everything from ideation to production while you focus on growing your business.
-              </motion.p>
-
-              <AnimatedButton variant="liquid" size="lg" className="mx-auto">
-                Start Your Video Journey
-              </AnimatedButton>
-            </motion.div>
-          </motion.div>
         </div>
       </AnimatedSection>
 

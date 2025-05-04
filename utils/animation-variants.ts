@@ -168,7 +168,7 @@ export const buttonHoverAnimation = {
   rest: { scale: 1 },
   hover: {
     scale: 1.05,
-    boxShadow: "0 10px 15px -3px rgba(124, 58, 237, 0.3)",
+    boxShadow: "0 10px 15px -3px rgba(255, 100, 100, 0.3)",
     transition: {
       type: "spring",
       stiffness: 400,
@@ -177,7 +177,7 @@ export const buttonHoverAnimation = {
   },
   tap: {
     scale: 0.95,
-    boxShadow: "0 5px 10px -3px rgba(124, 58, 237, 0.3)",
+    boxShadow: "0 5px 10px -3px rgba(255, 100, 100, 0.3)",
     transition: {
       type: "spring",
       stiffness: 400,

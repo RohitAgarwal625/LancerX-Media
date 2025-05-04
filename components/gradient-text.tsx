@@ -16,9 +16,9 @@ interface GradientTextProps {
 export default function GradientText({
   children,
   className = "",
-  from = "from-primary",
-  via = "via-purple-500",
-  to = "to-accent",
+  from = "from-[rgb(255_100_100)]",
+  via = "via-[rgb(255_100_100)]",
+  to = "to-[rgb(255_100_100)]",
   tag = "span",
 }: GradientTextProps) {
   const Component = motion[tag]
