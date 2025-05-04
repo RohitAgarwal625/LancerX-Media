@@ -479,7 +479,7 @@ body {
 }
 
 .star-button:hover {
-  box-shadow: 0 0 25px rgba(124, 58, 237, 0.5);
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.5);
 }
 
 .star-button:hover .star-1 {
@@ -543,7 +543,7 @@ body {
 }
 
 .fil0 {
-  fill: #7c3aed;
+  fill: #FF6464;
 }
 
 @keyframes gradient-shift {

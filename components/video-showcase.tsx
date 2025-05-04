@@ -128,7 +128,7 @@ export default function VideoShowcase() {
                   <div className="aspect-[9/16] bg-black relative overflow-hidden rounded-[36px] border-8 border-gray-900">
                     <div className="w-full h-full">
                       <iframe
-                        src={`https://fast.wistia.net/embed/iframe/${video.wistiaId}?autoPlay=true&playerColor=7C3AED&controlsVisibleOnLoad=false&volumeControl=false&fullscreenButton=false&playbar=false&smallPlayButton=false&playButton=false&endVideoBehavior=loop`}
+                        src={`https://fast.wistia.net/embed/iframe/${video.wistiaId}?playerColor=7C3AED&controlsVisibleOnLoad=false&volumeControl=false&fullscreenButton=false&playbar=false&smallPlayButton=false&playButton=false&endVideoBehavior=loop`}
                         className="w-full h-full absolute inset-0"
                         allowTransparency={true}
                         frameBorder="0"

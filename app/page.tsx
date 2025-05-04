@@ -664,13 +664,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <AnimatedText tag="p" className="text-3xl md:text-4xl font-bold text-center text-success mb-8" delay={0.7}>
-              READY TO SCALE YOUR YOUTUBE PRESENCE?
-            </AnimatedText>
-
-            <AnimatedButton variant="liquid" size="lg" className="mx-auto">
-              Start Your YouTube Journey
-            </AnimatedButton>
+            
 
             {/* Animated accent lines */}
             <div className="relative mt-16 max-w-2xl mx-auto">

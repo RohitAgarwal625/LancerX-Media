@@ -115,7 +115,7 @@ export default function PricingPage() {
       {/* Animated background elements */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <motion.div
-          className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-96 h-96 bg-[#FF6464]/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
@@ -123,7 +123,7 @@ export default function PricingPage() {
           transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-20 left-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-72 h-72 bg-[#FF6464]/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.1, 0.3, 0.1],
@@ -135,7 +135,7 @@ export default function PricingPage() {
         {[...Array(15)].map((_, i) => (
           <motion.div
             key={`particle-pricing-${i}`}
-            className="absolute rounded-full bg-primary/20"
+            className="absolute rounded-full bg-[#FF6464]/20"
             style={{
               width: Math.random() * 6 + 2,
               height: Math.random() * 6 + 2,
@@ -159,8 +159,8 @@ export default function PricingPage() {
 
       {/* Header */}
       <section className="pt-32 pb-16 px-4 relative overflow-hidden">
-        <div className="absolute right-0 top-0 w-1/3 h-1/3 bg-primary/20 rounded-bl-full blur-3xl"></div>
-        <div className="absolute left-0 bottom-0 w-1/4 h-1/4 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute right-0 top-0 w-1/3 h-1/3 bg-[#FF6464]/20 rounded-bl-full blur-3xl"></div>
+        <div className="absolute left-0 bottom-0 w-1/4 h-1/4 bg-[#FF6464]/10 rounded-full blur-3xl"></div>
 
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
@@ -197,7 +197,7 @@ export default function PricingPage() {
 
           {/* Animated divider */}
           <motion.div
-            className="w-32 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-8"
+            className="w-32 h-1 bg-gradient-to-r from-[#FF6464] to-[#FF6464] rounded-full mx-auto mb-8"
             initial={{ width: 0 }}
             animate={{ width: isComparisonInView ? "200px" : 0 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -220,7 +220,7 @@ export default function PricingPage() {
             >
               {pricingType === "monthly" && (
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full -z-10"
+                  className="absolute inset-0 bg-gradient-to-r from-[#FF6464] to-[#FF6464] rounded-full -z-10"
                   layoutId="pricingTabBackground"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -244,7 +244,7 @@ export default function PricingPage() {
             >
               {pricingType === "package" && (
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full -z-10"
+                  className="absolute inset-0 bg-gradient-to-r from-[#FF6464] to-[#FF6464] rounded-full -z-10"
                   layoutId="pricingTabBackground"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -288,9 +288,9 @@ export default function PricingPage() {
                   onHover={() => setHoveredPlan("starter")}
                   onLeave={() => setHoveredPlan(null)}
                   isHovered={hoveredPlan === "starter"}
-                  accentColor="from-blue-500 to-blue-600"
-                  iconBg="bg-blue-500/20"
-                  iconColor="text-blue-500"
+                  accentColor="from-cyan-500 to-teal-500"
+                  iconBg="bg-cyan-500/20"
+                  iconColor="text-cyan-500"
                   openRazorpayModal={openRazorpayModal}
                 />
 
@@ -480,7 +480,7 @@ export default function PricingPage() {
       {/* Comparison Table */}
       <section className="py-20 px-4 relative overflow-hidden" ref={comparisonRef}>
         <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-black/50 via-primary/5 to-black/50 -z-10"
+          className="absolute inset-0 bg-gradient-to-b from-black/50 via-[#FF6464]/5 to-black/50 -z-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: isComparisonInView ? 1 : 0 }}
           transition={{ duration: 1 }}
@@ -499,9 +499,9 @@ export default function PricingPage() {
                 isComparisonInView
                   ? {
                       filter: [
-                        "drop-shadow(0 0 0px rgba(124, 58, 237, 0))",
-                        "drop-shadow(0 0 15px rgba(124, 58, 237, 0.7))",
-                        "drop-shadow(0 0 0px rgba(124, 58, 237, 0))",
+                        "drop-shadow(0 0 0px rgba(255, 100, 100, 0))",
+                        "drop-shadow(0 0 15px rgba(255, 100, 100, 0.7))",
+                        "drop-shadow(0 0 0px rgba(255, 100, 100, 0))",
                       ],
                     }
                   : {}
@@ -514,7 +514,7 @@ export default function PricingPage() {
             </motion.div>
 
             <motion.div
-              className="w-32 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-8"
+              className="w-32 h-1 bg-gradient-to-r from-[#FF6464] to-[#FF6464] rounded-full mx-auto mb-8"
               initial={{ width: 0 }}
               animate={{ width: isComparisonInView ? "200px" : 0 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -564,7 +564,7 @@ export default function PricingPage() {
                       <div className="flex flex-col items-center">
                         <span className="text-primary font-bold mb-1">LancerX Media</span>
                         <motion.div
-                          className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center"
+                          className="w-8 h-8 rounded-full bg-[#FF6464]/20 flex items-center justify-center"
                           animate={
                             animateComparison
                               ? {
@@ -601,7 +601,7 @@ export default function PricingPage() {
                           animate={
                             animateComparison
                               ? {
-                                  color: ["#ffffff", "#7C3AED", "#ffffff"],
+                                  color: ["#ffffff", "#FF6464", "#ffffff"],
                                 }
                               : {}
                           }
@@ -625,7 +625,7 @@ export default function PricingPage() {
               }}
               transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
             >
-              <div className="absolute inset-0 rounded-xl border-2 border-primary/50" />
+              <div className="absolute inset-0 rounded-xl border-2 border-[#FF6464]/50" />
             </motion.div>
           </motion.div>
         </div>
@@ -681,7 +681,7 @@ export default function PricingPage() {
       {/* Testimonials Section */}
       <section className="py-20 px-4 relative overflow-hidden">
         <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-black/50 via-primary/5 to-black/50 -z-10"
+          className="absolute inset-0 bg-gradient-to-b from-black/50 via-[#FF6464]/5 to-black/50 -z-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -700,7 +700,7 @@ export default function PricingPage() {
           </motion.h2>
 
           <motion.div
-            className="w-32 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-12"
+            className="w-32 h-1 bg-gradient-to-r from-[#FF6464] to-[#FF6464] rounded-full mx-auto mb-12"
             initial={{ width: 0 }}
             whileInView={{ width: "200px" }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -746,7 +746,7 @@ export default function PricingPage() {
         >
           {/* Animated background glow */}
           <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-primary/5 blur-3xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-[#FF6464]/5 blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3],
@@ -758,7 +758,7 @@ export default function PricingPage() {
           {[...Array(5)].map((_, i) => (
             <FloatingElement key={i} className="absolute">
               <motion.div
-                className="w-4 h-4 rounded-full bg-primary/30"
+                className="w-4 h-4 rounded-full bg-[#FF6464]/30"
                 style={{
                   left: `${30 + Math.random() * 40}%`,
                   top: `${20 + Math.random() * 60}%`,
@@ -842,24 +842,24 @@ const PricingCard = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
       className={`relative rounded-xl overflow-hidden ${
-        popular ? "border-2 border-primary" : "border border-gray-800"
+        popular ? "border-2 border-[#FF6464]" : "border border-gray-800"
       }`}
       onHoverStart={onHover}
       onHoverEnd={onLeave}
       whileHover={{
         y: -10,
-        boxShadow: "0 25px 50px -12px rgba(124, 58, 237, 0.25)",
+        boxShadow: "0 25px 50px -12px rgba(255, 100, 100, 0.25)",
         transition: { duration: 0.3 },
       }}
     >
       {popular && (
         <motion.div
           className="absolute top-0 left-0 right-0 py-1.5 text-center text-sm font-medium z-10 overflow-hidden"
-          initial={{ backgroundColor: "rgba(124, 58, 237, 1)" }}
+          initial={{ backgroundColor: "rgba(255, 100, 100, 1)" }}
           animate={{
             backgroundColor: isHovered
-              ? ["rgba(124, 58, 237, 1)", "rgba(147, 51, 234, 1)", "rgba(124, 58, 237, 1)"]
-              : "rgba(124, 58, 237, 1)",
+              ? ["rgba(255, 100, 100, 1)", "rgba(255, 100, 100, 1)", "rgba(255, 100, 100, 1)"]
+              : "rgba(255, 100, 100, 1)",
           }}
           transition={{ duration: 2, repeat: isHovered ? Number.POSITIVE_INFINITY : 0 }}
         >
@@ -893,7 +893,7 @@ const PricingCard = ({
 
       {bestValue && (
         <motion.div
-          className="absolute -top-4 -right-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full z-20 shadow-lg"
+          className="absolute -top-4 -right-4 bg-[#FF6464] text-white text-xs font-bold px-2 py-1 rounded-full z-20 shadow-lg"
           initial={{ scale: 0 }}
           animate={{ scale: 1, rotate: [-5, 5, -5] }}
           transition={{
@@ -1046,8 +1046,8 @@ const FaqItem = ({ question, answer, delay }) => {
           animate={
             isOpen
               ? {
-                  color: "#7C3AED",
-                  textShadow: "0 0 8px rgba(124, 58, 237, 0.5)",
+                  color: "#FF6464",
+                  textShadow: "0 0 8px rgba(255, 100, 100, 0.5)",
                 }
               : {}
           }
@@ -1055,7 +1055,7 @@ const FaqItem = ({ question, answer, delay }) => {
           {question}
         </motion.h3>
         <motion.span
-          className="transform transition-transform text-primary"
+          className="transform transition-transform text-[#FF6464]"
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
         >
@@ -1106,33 +1106,33 @@ const TestimonialCard = ({ name, role, quote, rating, delay }) => {
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{
         y: -10,
-        boxShadow: "0 20px 25px -5px rgba(124, 58, 237, 0.1), 0 10px 10px -5px rgba(124, 58, 237, 0.04)",
-        borderColor: "rgba(124, 58, 237, 0.3)",
+        boxShadow: "0 20px 25px -5px rgba(255, 100, 100, 0.1), 0 10px 10px -5px rgba(255, 100, 100, 0.04)",
+        borderColor: "rgba(255, 100, 100, 0.3)",
       }}
     >
       {/* Blue gradient ball spots on hover */}
       {isHovered && (
         <>
           <motion.div
-            className="absolute w-20 h-20 rounded-full bg-blue-500/10 blur-xl"
+            className="absolute w-20 h-20 rounded-full bg-red-500/10 blur-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             style={{ top: "10%", right: "10%" }}
           />
           <motion.div
-            className="absolute w-16 h-16 rounded-full bg-indigo-500/10 blur-xl"
+            className="absolute w-16 h-16 rounded-full bg-red-400/10 blur-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             style={{ bottom: "20%", left: "15%" }}
           />
           <motion.div
-            className="absolute w-12 h-12 rounded-full bg-purple-500/10 blur-xl"
+            className="absolute w-12 h-12 rounded-full bg-red-600/10 blur-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             style={{ top: "40%", left: "10%" }}
           />
           <motion.div
-            className="absolute w-10 h-10 rounded-full bg-cyan-500/10 blur-xl"
+            className="absolute w-10 h-10 rounded-full bg-red-500/10 blur-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             style={{ bottom: "10%", right: "20%" }}
